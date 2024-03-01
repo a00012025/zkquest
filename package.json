@@ -18,5 +18,8 @@
     "typescript": "^5.3.3",
     "zksync-ethers": "6"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "viem": "^2.7.16"
+  }
 }
