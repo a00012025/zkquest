@@ -18,7 +18,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
 
   // Create deployer object and load the artifact of the contract you want to deploy.
   const deployer = new Deployer(hre, wallet);
-  const artifact = await deployer.loadArtifact("CoffeeERC20");
+  const artifact = await deployer.loadArtifact("ZKPassportNFT");
 
   // Estimate contract deployment fee
   const deploymentFee = await deployer.estimateDeployFee(artifact, []);
