@@ -12,6 +12,7 @@
     "@matterlabs/hardhat-zksync-verify": "^1.4.1",
     "@openzeppelin/contracts": "4.9",
     "@openzeppelin/contracts-upgradeable": "4.9",
+    "@openzeppelin/contracts-v5": "npm:@openzeppelin/contracts@5",
     "ethers": "6",
     "hardhat": "^2.20.1",
     "ts-node": "^10.9.2",
@@ -19,7 +20,10 @@
     "zksync-ethers": "6"
   },
   "dependencies": {
+    "@matterlabs/zksync-contracts": "^0.6.1",
     "dotenv": "^16.4.5",
+    "openzeppelin-contracts": "^4.0.0",
+    "solmate": "^6.2.0",
     "viem": "^2.7.16"
   }
 }

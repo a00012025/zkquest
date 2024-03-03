@@ -1,7 +1,7 @@
-import { Wallet, utils } from "zksync-ethers";
-import * as ethers from "ethers";
+import { Wallet } from "zksync-ethers";
 import { HardhatRuntimeEnvironment } from "hardhat/types";
 import { Deployer } from "@matterlabs/hardhat-zksync-deploy";
+import { formatEther } from "viem";
 
 // Get private key from the environment variable
 const PRIVATE_KEY: string = process.env.ZKS_PRIVATE_KEY || "";
@@ -32,7 +32,7 @@ export default async function (hre: HardhatRuntimeEnvironment) {
   // await depositHandle.wait();
 
   // Deploy this contract. The returned object will be of a `Contract` type, similarly to ones in `ethers`.
-  const parsedFee = ethers.utils.formatEther(deploymentFee.toString());
+  const parsedFee = formatEther(deploymentFee);
   console.log(`The deployment is estimated to cost ${parsedFee} ETH`);
 
   const greeterContract = await deployer.deploy(artifact, []);
